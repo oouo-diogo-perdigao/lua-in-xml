@@ -1,0 +1,13 @@
+{
+	"search.exclude": {
+		"**/node_modules": true
+	},
+	"emeraldwalk.runonsave": {
+		"commands": [
+			{
+				"match": "\\.yaml$",
+				"cmd": "npm run build-json"
+			},
+		]
+	},
+}

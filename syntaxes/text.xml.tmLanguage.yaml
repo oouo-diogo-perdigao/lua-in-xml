@@ -1,0 +1,14 @@
+$schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+scopeName: text.xml.lua
+injectionSelector: L:text.xml
+name: xml.lua
+patterns:
+  - include: '#tag-script'
+repository:
+  tag-script:
+    begin: <((\bscript\b)|(\bevent\b))[\s]*[="\w\:\/\.\-\_]*>
+    end: (<\/)+((\bscript\b)|(\bevent\b))[\s]*[="\w\:\/\.\-\_]*>
+    patterns:
+      - include: source.lua
+
+    
