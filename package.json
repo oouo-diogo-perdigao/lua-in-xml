@@ -2,7 +2,7 @@
 	"name": "lua-in-xml",
 	"displayName": "lua-in-xml",
 	"description": "Syntax highlighting lua for template xml",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"publisher": "oouo-diogo-perdigao",
 	"author": {
 		"name": "Diogo Passos Perdigão Britto",
@@ -11,22 +11,22 @@
 	},
 	"license": "MIT",
 	"licenseUrl": "LICENSE",
-	"icon": "images/icon.png",
+	"icon": "images/logo.png",
 	"galleryBanner": {
 		"color": "#252627",
 		"theme": "dark"
 	},
 	"scripts": {
-		"build-json": "npx js-yaml syntaxes/text.xml.tmLanguage.yaml > syntaxes/text.xml.tmLanguage.json",
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./"
+		"build-json": "npx js-yaml syntaxes/text.xml.tmLanguage.yaml > syntaxes/text.xml.tmLanguage.json"
 	},
 	"contributes": {
 		"grammars": [
 			{
 				"scopeName": "text.xml.lua",
 				"path": "./syntaxes/text.xml.tmLanguage.json",
-				"injectTo": ["text.xml"]
+				"injectTo": [
+					"text.xml"
+				]
 			}
 		]
 	},
@@ -38,6 +38,9 @@
 	},
 	"categories": [
 		"Programming Languages"
+	],
+	"extensionPack": [
+		"trixnz.vscode-lua"
 	],
 	"bugs": {
 		"url": "https://github.com/oouo-diogo-perdigao/lua-in-xml/issues"
